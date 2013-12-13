@@ -3,7 +3,7 @@
 require("../phpMQTT.php");
 
 	
-$mqtt = new phpMQTT("example.com", 1883, "PHP MQTT Client");
+$mqtt = new phpMQTT("test.mosquitto.com", 1883, "PHP MQTT Client");
 
 if ($mqtt->connect()) {
 	$mqtt->publish("bluerhinos/phpMQTT/examples/publishtest","Hello World! at ".date("r"),0);
